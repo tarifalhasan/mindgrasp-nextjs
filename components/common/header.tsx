@@ -1,4 +1,11 @@
 "use client";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { HiOutlineMenuAlt2 } from "react-icons/hi";
 
 import {
   NavigationMenu,
@@ -53,11 +60,11 @@ const links: { title: string; href: string; description: string }[] = [
   },
 ];
 
-export function NavigationMenuDemo() {
+export function NavigationMenusItems() {
   return (
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
+    <NavigationMenu className="">
+      <NavigationMenuList className=" lg:items-center lg:justify-center lg:flex-row flex-col">
+        <NavigationMenuItem className=" sr-only lg:not-sr-only">
           <NavigationMenuTrigger>Product</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -72,6 +79,13 @@ export function NavigationMenuDemo() {
               ))}
             </ul>
           </NavigationMenuContent>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/products" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Products
+            </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/use-case" legacyBehavior passHref>
@@ -131,40 +145,69 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
+
+const AuthenticationMenu = () => {
+  return (
+    <NavigationMenu>
+      <NavigationMenuList className=" lg:items-center flex lg:justify-center lg:flex-row flex-col">
+        <NavigationMenuItem>
+          <Link href="/sales" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Sales
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <div className=" sr-only lg:not-sr-only bg-skin-dark-100 h-[16px] w-[1px]" />
+        <NavigationMenuItem>
+          <Link href="/sales" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Log in
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <Link href="/pricing" legacyBehavior passHref>
+            <Button variant={"ghost"}>Try It Free</Button>
+          </Link>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
+};
+
 const MainHeader = () => {
   return (
-    <header className=" bg-white sticky top-0 left-0 right-0">
-      <div className=" flex w-full  max-w-[1440px] mx-auto items-center justify-between h-[104px]">
+    <header className="  bg-white sticky top-0 left-0 right-0">
+      <div className=" hidden  px-4 lg:flex w-full  max-w-[1820px] mx-auto items-center justify-between h-[104px]">
         <div className="flex items-center gap-5">
           <Link href={"/"}>
             <Image width={226} height={48} src={"/images/Logo.svg"} alt="mg" />
           </Link>
-          <NavigationMenuDemo />
+          <NavigationMenusItems />
         </div>
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link href="/sales" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Sales
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <div className=" bg-skin-dark-100 h-[16px] w-[1px]" />
-            <NavigationMenuItem>
-              <Link href="/sales" legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Log in
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href="/pricing" legacyBehavior passHref>
-                <Button variant={"ghost"}>Try It Free</Button>
-              </Link>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        <AuthenticationMenu />
+      </div>
+      <div className=" lg:sr-only">
+        <div className=" px-4 py-4 flex items-center justify-between">
+          <Link href={"/"}>
+            <Image width={226} height={48} src={"/images/Logo.svg"} alt="mg" />
+          </Link>
+          <Sheet>
+            <SheetTrigger asChild>
+              <button>
+                <HiOutlineMenuAlt2 size={34} />
+              </button>
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <div className=" flex items-center justify-center flex-col">
+                  <NavigationMenusItems />
+                  <AuthenticationMenu />
+                </div>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
