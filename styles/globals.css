@@ -71,6 +71,19 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background overflow-hidden overflow-y-scroll text-foreground;
+  }
+}
+
+@layer components {
+  .title {
+    @apply text-4xl lg:text-6xl font-black tracking-tight;
+    background: var(
+      --Main-Primary,
+      linear-gradient(224deg, #ab57ff 0.84%, #7180fe 48.26%, #2ed5f6 99.16%)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

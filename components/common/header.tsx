@@ -177,7 +177,7 @@ const AuthenticationMenu = () => {
 
 const MainHeader = () => {
   return (
-    <header className="  bg-white sticky top-0 left-0 right-0">
+    <header className="  z-50 bg-white sticky top-0 left-0 right-0">
       <div className=" hidden  px-4 lg:flex w-full  max-w-[1820px] mx-auto items-center justify-between h-[104px]">
         <div className="flex items-center gap-5">
           <Link href={"/"}>

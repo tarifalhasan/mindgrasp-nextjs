@@ -21,6 +21,7 @@ const config = {
     extend: {
       backgroundImage: {
         btn: "linear-gradient(224deg, #9143DF 0.84%, #4658EF 48.26%, #2ED5F6 99.16%)",
+        blueBulp: "rgba(67, 187, 248, 0.15)",
       },
       colors: {
         border: "hsl(var(--border))",
