@@ -1,6 +1,9 @@
+import Footer from "@/components/common/footer";
 import MainHeader from "@/components/common/header";
 import BlogPosts from "@/components/pages/blog/landing/blogs";
 import BlogLandingHome from "@/components/pages/blog/landing/hero";
+import PaymentSupport from "@/components/pages/blog/landing/payment-support";
+import TopVideos from "@/components/pages/blog/landing/top-videos";
 
 const blogPosts = [
   {
@@ -61,10 +64,16 @@ const blogPosts = [
 ];
 export default function Home() {
   return (
-    <div className=" relative overflow-hidden ">
+    <>
       <MainHeader />
-      <BlogLandingHome />
-      <BlogPosts posts={blogPosts} />
-    </div>
+      <div className=" relative overflow-hidden ">
+        <BlogLandingHome />
+
+        <BlogPosts posts={blogPosts} />
+        <TopVideos />
+        <PaymentSupport />
+      </div>
+      <Footer />
+    </>
   );
 }

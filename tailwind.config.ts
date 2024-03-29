@@ -22,6 +22,8 @@ const config = {
       backgroundImage: {
         btn: "linear-gradient(224deg, #9143DF 0.84%, #4658EF 48.26%, #2ED5F6 99.16%)",
         blueBulp: "rgba(67, 187, 248, 0.15)",
+        primary:
+          "linear-gradient(224deg, #AB57FF 0.84%, #7180FE 48.26%, #2ED5F6 99.16%)",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,6 +63,7 @@ const config = {
           "dark-100": "#101828",
           "dark-70": "#585D69",
           blue: "#5056EE",
+          "gray-200": "#EAECF0",
         },
       },
       borderRadius: {
@@ -89,6 +92,7 @@ const config = {
       boxShadow: {
         smoothness: "0px 20px 64px 0px rgba(0, 0, 0, 0.05)",
         lg: "0px 17.293px 86.467px 0px rgba(0, 0, 0, 0.05)",
+        s3: "0px 20px 64px 0px rgba(0, 0, 0, 0.12)",
       },
     },
   },

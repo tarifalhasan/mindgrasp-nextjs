@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: #feffff;
+    --background: #fbfdff;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -85,5 +85,15 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+.footer-clip {
+  clip-path: ellipse(113% 100% at bottom center);
+}
+
+@media screen and (max-width: 768px) {
+  .footer-clip {
+    clip-path: ellipse(210% 100% at bottom center);
   }
 }
