@@ -35,7 +35,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
           quality={80}
         />
       </div>
-      <div className="bg-white p-4 space-y-4">
+      <div
+        style={{
+          boxShadow: "0px 11.002px 55.009px 0px rgba(0, 0, 0, 0.05)",
+        }}
+        className="bg-white s  p-4 space-y-4"
+      >
         <ul className="flex flex-wrap items-center gap-3">
           {categories.map((category, index) => (
             <li

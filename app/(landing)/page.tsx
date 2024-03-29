@@ -1,6 +1,6 @@
 import MainHeader from "@/components/common/header";
+import BlogPosts from "@/components/pages/blog/landing/blogs";
 import BlogLandingHome from "@/components/pages/blog/landing/hero";
-import BlogCard from "@/components/shared/blog-card";
 
 const blogPosts = [
   {
@@ -61,37 +61,10 @@ const blogPosts = [
 ];
 export default function Home() {
   return (
-    <div className=" relative ">
+    <div className=" relative overflow-hidden ">
       <MainHeader />
       <BlogLandingHome />
-      <div className=" container py-4 grid sm:grid-cols-2 xl:grid-cols-3 gap-12">
-        {blogPosts.map((post) => (
-          <BlogCard
-            key={post.id}
-            imageSrc={post.imageSrc}
-            imageAlt={post.imageAlt}
-            categories={post.categories}
-            title={post.title}
-            authorName={post.authorName}
-            authorAvatarSrc={post.authorAvatarSrc}
-            authorAvatarAlt={post.authorAvatarAlt}
-            date={post.date}
-          />
-        ))}
-      </div>
-      <div
-        style={{
-          background: "rgba(67, 187, 248, 0.15)",
-        }}
-        className=" z-20 absolute left-0 xl:-left-[10%] rounded-full blur-[250px] 
-         top-[35%] xl:top-[18%] bg-[]  xl:w-[950px] xl:h-[950px] w-[400px] h-[400px]"
-      />
-      <div
-        style={{
-          background: "rgba(157, 97, 255, 0.15)",
-        }}
-        className=" z-20 absolute  right-0 rounded-full blur-[250px]  top-[0%] bg-[]  xl:w-[950px] xl:h-[950px] w-[400px] h-[400px]"
-      ></div>
+      <BlogPosts posts={blogPosts} />
     </div>
   );
 }
