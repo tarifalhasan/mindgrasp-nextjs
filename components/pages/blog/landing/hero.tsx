@@ -1,8 +1,10 @@
 import BlogCard from "@/components/shared/blog-card";
 import { Button } from "@/components/ui/button";
+import pl from "@/public/images/pattern-left.webp";
+import pr from "@/public/images/pattern-right.webp";
+import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
-
 const BlogLandingHome = () => {
   return (
     <>
@@ -73,12 +75,22 @@ const BlogLandingHome = () => {
         className=" z-20 absolute left-0 xl:-left-[10%] rounded-full blur-[250px] 
          top-[35%] xl:top-[18%] bg-[]  xl:w-[950px] xl:h-[950px] w-[400px] h-[400px]"
       />
+      <Image
+        src={pl}
+        className=" z-20 absolute  top-[35%] xl:top-[2%] left-0"
+        alt="dfdfdfdf"
+      />
       <div
         style={{
           background: "rgba(157, 97, 255, 0.15)",
         }}
         className=" z-20 absolute  right-0 rounded-full blur-[250px]  top-[0%] bg-[]  xl:w-[950px] xl:h-[950px] w-[400px] h-[400px]"
       ></div>
+      <Image
+        src={pr}
+        className=" z-20 absolute top-[1%]  right-0"
+        alt="dfdfdfdf"
+      />
     </>
   );
 };

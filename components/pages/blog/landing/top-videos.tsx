@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
+import pl from "@/public/images/pattern-left.webp";
+import pr from "@/public/images/pattern-right.webp";
 import Image from "next/image";
 import Link from "next/link";
-
 const TopVideos = () => {
   const videos = [
     {
@@ -65,12 +66,22 @@ const TopVideos = () => {
         className=" z-20 absolute left-0 xl:-left-[10%] rounded-full  
       top-[80%] lg:top-[68%] bg-[]  xl:w-[950px] xl:h-[950px] w-[400px] blur-[250px]  h-[400px]"
       />
+      <Image
+        src={pl}
+        className=" z-20 absolute  top-[80%] lg:top-[75%] left-0"
+        alt="dfdfdfdf"
+      />
       <div
         style={{
           background: "rgba(157, 97, 255, 0.19)",
         }}
         className=" z-20 absolute  right-0 rounded-full  top-[88%] blur-[250px] lg:top-[66%] bg-[]  xl:w-[950px] xl:h-[950px] w-[400px] h-[400px]"
       ></div>
+      <Image
+        src={pr}
+        className=" z-20 absolute  right-0  top-[88%] lg:top-[66%]"
+        alt="dfdfdfdf"
+      />
     </>
   );
 };
