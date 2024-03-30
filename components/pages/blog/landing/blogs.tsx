@@ -31,6 +31,7 @@ const BlogPosts = ({ posts }: { posts: any[] }) => {
             authorAvatarSrc={post.authorAvatarSrc}
             authorAvatarAlt={post.authorAvatarAlt}
             date={post.date}
+            slug={`/blogs/${post.id.toString()}`}
           />
         ))}
       </div>

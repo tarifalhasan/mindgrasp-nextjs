@@ -66,6 +66,7 @@ const BlogLandingHome = () => {
           authorAvatarSrc="https://github.com/shadcn.png"
           authorAvatarAlt="Author Avatar"
           date="Nov 26, 2023"
+          slug="/"
         />
       </div>
       <div

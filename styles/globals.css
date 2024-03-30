@@ -73,6 +73,10 @@
   body {
     @apply bg-background overflow-hidden overflow-y-scroll text-foreground;
   }
+  p,
+  li {
+    @apply text-sm lg:text-xl font-normal;
+  }
 }
 
 @layer components {
@@ -83,6 +87,10 @@
       linear-gradient(224deg, #ab57ff 0.84%, #7180fe 48.26%, #2ed5f6 99.16%)
     );
     background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .bg-clip-text {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

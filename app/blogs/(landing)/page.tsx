@@ -1,5 +1,3 @@
-import Footer from "@/components/common/footer";
-import MainHeader from "@/components/common/header";
 import BlogPosts from "@/components/pages/blog/landing/blogs";
 import BlogLandingHome from "@/components/pages/blog/landing/hero";
 import PaymentSupport from "@/components/pages/blog/landing/payment-support";
@@ -65,7 +63,6 @@ const blogPosts = [
 export default function Home() {
   return (
     <>
-      <MainHeader />
       <div className=" relative overflow-hidden ">
         <BlogLandingHome />
 
@@ -73,7 +70,6 @@ export default function Home() {
         <TopVideos />
         <PaymentSupport />
       </div>
-      <Footer />
     </>
   );
 }

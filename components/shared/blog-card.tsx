@@ -1,5 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface BlogCardProps {
@@ -11,6 +12,7 @@ interface BlogCardProps {
   authorAvatarSrc: string;
   authorAvatarAlt: string;
   date: string;
+  slug: string;
 }
 
 const BlogCard: React.FC<BlogCardProps> = ({
@@ -22,9 +24,10 @@ const BlogCard: React.FC<BlogCardProps> = ({
   authorAvatarSrc,
   authorAvatarAlt,
   date,
+  slug,
 }) => {
   return (
-    <div className="rounded-20 relative overflow-hidden">
+    <Link href={slug} className="rounded-20 relative overflow-hidden">
       <div>
         <Image
           className="h-[262px] w-full object-cover"
@@ -73,7 +76,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

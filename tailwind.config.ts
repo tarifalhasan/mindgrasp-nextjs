@@ -24,6 +24,8 @@ const config = {
         blueBulp: "rgba(67, 187, 248, 0.15)",
         primary:
           "linear-gradient(224deg, #AB57FF 0.84%, #7180FE 48.26%, #2ED5F6 99.16%)",
+        hoverMain:
+          "linear-gradient(224deg, #9143DF 0.84%, #4658EF 48.26%, #2ED5F6 99.16%)",
       },
       colors: {
         border: "hsl(var(--border))",
