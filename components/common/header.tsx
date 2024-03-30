@@ -157,7 +157,7 @@ const AuthenticationMenu = () => {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <div className=" sr-only lg:not-sr-only bg-skin-dark-100 h-[16px] w-[1px]" />
+        <div className="   hidden lg:block bg-skin-dark-100 h-[16px] w-[1px]" />
         <NavigationMenuItem>
           <Link href="/sales" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
@@ -167,7 +167,9 @@ const AuthenticationMenu = () => {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/pricing" legacyBehavior passHref>
-            <Button variant={"ghost"}>Try It Free</Button>
+            <Button className=" bg-skin-dark-100" variant={"ghost"}>
+              Try It Free
+            </Button>
           </Link>
         </NavigationMenuItem>
       </NavigationMenuList>

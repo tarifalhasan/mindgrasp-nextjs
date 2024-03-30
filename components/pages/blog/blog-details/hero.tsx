@@ -11,7 +11,7 @@ import {
 
 const BlogPageDetailsHero = () => {
   return (
-    <div className=" py-28 bg-primary flex items-center justify-center">
+    <div className=" py-16 sm:py-28 bg-primary flex items-center justify-center">
       <div className="container grid xl:grid-cols-2 xl:gap-x-10 gap-y-10 xl:gap-y-0">
         <div className="  space-y-6">
           <div className=" flex items-center gap-3">

@@ -56,7 +56,7 @@ const Footer = () => {
     <div className=" relative">
       <footer className="  mt-[10rem] footer-clip bg-skin-dark-100 relative  x] ">
         <div className="container relative z-30 pt-[10rem] lg:pt-[17rem]">
-          <div className=" flex items-start justify-between gap-10 flex-wrap">
+          <div className=" flex items-start lg:flex-row flex-col justify-between gap-10 flex-wrap">
             <div>
               <Link href={"/"}>
                 <Image
@@ -76,7 +76,7 @@ const Footer = () => {
                   {list.links.map((link, index) => (
                     <li key={link.label}>
                       <Link
-                        className=" text-lg text-white font-normal hover:underline transition-all hover:text-skin-blue"
+                        className=" text-sm sm:text-lg text-white font-normal hover:underline transition-all hover:text-skin-blue"
                         href={"/"}
                       >
                         {link.label}
@@ -94,20 +94,20 @@ const Footer = () => {
               <ul className=" pt-4 space-y-4">
                 <li className=" flex  gap-x-1">
                   <IoLocationSharp className=" text-2xl text-white" />
-                  <span className=" text-lg font-normal text-skin-gray-200">
+                  <span className=" text-sm sm:text-lg font-normal text-skin-gray-200">
                     6751 Columbia Gateway Dr <br /> STE 300 <br /> Columbia, MD
                     21045
                   </span>
                 </li>
                 <li className=" flex  gap-x-1">
                   <IoMail className=" text-2xl text-white" />
-                  <span className=" text-lg font-normal text-skin-gray-200">
+                  <span className=" text-sm sm:text-lg font-normal text-skin-gray-200">
                     contact@mindgrasp.ai
                   </span>
                 </li>{" "}
                 <li className=" flex  gap-x-1">
                   <IoCallSharp className=" text-2xl text-white" />
-                  <span className=" text-lg font-normal text-skin-gray-200">
+                  <span className=" text-sm sm:text-lg font-normal text-skin-gray-200">
                     +1(778) 451- 0000
                   </span>
                 </li>
@@ -115,7 +115,7 @@ const Footer = () => {
             </div>
           </div>
           <div className=" mt-14 border-t border-white/[0.2] py-5  flex items-center justify-between">
-            <p className=" text-lg text-white font-normal]">
+            <p className=" text-xs lg:text-lg text-white font-normal]">
               © 2023. All rights reserved
             </p>
             <ul className=" inline-flex items-center gap-x-4">
@@ -253,7 +253,7 @@ const Footer = () => {
       <div className=" container">
         <div className=" absolute container max-w-[90%] xl:max-w-[1440px] top-[-12%] lg:top-[-24%] left-0 right-0 flex   rounded-[40px] lg:rounded-[80px] a flex-col sm:flex-row sm:items-center justify-between py-5 bg-primary shadow-s3 px-10">
           <div className="  max-w-[656px] space-y-6">
-            <h3 className=" text-3xl lg:text-5xl font-bold text-white leading-[100%] capitalize  tracking-[-1.12px]">
+            <h3 className=" text-2xl sm:text-3xl lg:text-5xl font-bold text-white leading-[110%] capitalize  tracking-[-1.12px]">
               Get instant access to updates and support from our team
             </h3>
             <Button

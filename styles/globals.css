@@ -77,6 +77,12 @@
   li {
     @apply text-sm lg:text-xl font-normal;
   }
+  h3 {
+    @apply text-2xl xl:text-4xl 2xl:text-4xl font-bold;
+  }
+  q {
+    @apply text-lg xl:text-xl block font-medium text-center;
+  }
 }
 
 @layer components {
